@@ -15,5 +15,4 @@ public class Application {
 		Pizza pizzaForWorker = new Pizza();
 		System.out.println(pizzaForWorker.readyToEat());
 	}
-
 }
