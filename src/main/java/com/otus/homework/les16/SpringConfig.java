@@ -18,13 +18,13 @@ public class SpringConfig {
         return new MeatPizza();
     }
 
-    @Bean
-    public Pizza veganPizza() {
-        return new Pizza(veganTaste());
+    @Bean(name = BeanNames.VEGAN_PIZZA)
+    public Pizza veganPizza(VeganPizza veganTaste) {
+        return new Pizza(veganTaste);
     }
 
-    @Bean
-    public Pizza meatPizza() {
-        return new Pizza(meatTaste());
+    @Bean(name = BeanNames.MEAT_PIZZA)
+    public Pizza meatPizza(MeatPizza meatTaste) {
+        return new Pizza(meatTaste);
     }
 }
